@@ -4,18 +4,36 @@ import org.springframework.stereotype.Component;
 
 import com.luv2code.aopdemo.Account;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class AccountDAO {
 
     private String name;
     private String serviceCode;
 
+
     public void addAccount(Account theAccount, boolean vipFlag) {
         System.out.println(getClass() + ": DOING MY DB WORK: ADDING AN ACCOUNT");
     }
 
-    public boolean doWork() {
 
+    // add new method: find accounts
+
+    public List<Account> findAccounts() {
+        List<Account> myAccount = new ArrayList<>();
+
+        // create sample account and add it to the list
+
+        myAccount.add(new Account("John", "Silver"));
+        myAccount.add(new Account("Merry", "Gold"));
+        myAccount.add(new Account("Emily", "Bronze"));
+
+        return myAccount;
+    }
+
+    public boolean doWork() {
         System.out.println(getClass() + ": doWork()");
         return false;
     }
@@ -39,9 +57,6 @@ public class AccountDAO {
         System.out.println(getClass() + ": in setServiceCode()");
         this.serviceCode = serviceCode;
     }
-
-
-
 }
 
 

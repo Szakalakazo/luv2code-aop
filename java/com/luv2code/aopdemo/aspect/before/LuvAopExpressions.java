@@ -1,4 +1,4 @@
-package com.luv2code.aopdemo.aspect;
+package com.luv2code.aopdemo.aspect.before;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
